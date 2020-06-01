@@ -8,11 +8,7 @@ public class CustomList<E> implements List<E> {
     // empty implementation methods
     @Override
     public boolean isEmpty() {
-        if (internal.length != 0) {
-            return false;
-        } else {
-            return true;
-        }
+        return internal.length == 0;
 
     }
 
