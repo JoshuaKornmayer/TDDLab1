@@ -1,5 +1,6 @@
 package TDDLab1;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class CustomList<E> implements List<E> {
@@ -13,14 +14,20 @@ public class CustomList<E> implements List<E> {
     }
 
     @Override
-    public boolean add(E element) {
-        internal = new Object[] { element };
-
-        return false;
+    public int size() {
+        return internal.length;
     }
 
     @Override
-    public int size() {
-        return internal.length;
+    public E get(int index) {
+        return (E) internal[index];
+    }
+
+    @Override
+    public boolean add(E element) {
+        Object[] temp = Arrays.copyOf(internal, internal.length + 1);
+        temp[internal.length] = element;
+        internal = temp;
+        return true;
     }
 }
