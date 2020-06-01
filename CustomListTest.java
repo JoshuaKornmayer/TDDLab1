@@ -1,5 +1,6 @@
 package TDDLab1;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -22,5 +23,13 @@ public class CustomListTest {
         list.add(null);
 
         assertFalse(list.isEmpty());
+    }
+
+    @Test
+    public void givenListWithAnElement_whenSize_thenOneIsReturned() {
+
+        List<Object> list = new CustomList<>();
+        list.add(null);
+        assertEquals(1, list.size());
     }
 }
