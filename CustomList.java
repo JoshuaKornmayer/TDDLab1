@@ -21,11 +21,6 @@ public class CustomList<E> implements List<E> {
 
     @Override
     public int size() {
-        if (isEmpty()) {
-            return 0;
-        } else {
-            return internal.length;
-        }
-
+        return internal.length;
     }
 }
