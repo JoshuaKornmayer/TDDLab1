@@ -38,7 +38,7 @@ public class CustomListTest {
 
         List<Object> list = new CustomList<>();
         list.add("baeldung");
-        Object elementt = list.get(0);
+        Object element = list.get(0);
 
         assertEquals("baeldung", element);
     }
